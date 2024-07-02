@@ -1,5 +1,8 @@
 {
   "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types","./custom-types"]
+  },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tsup.config.ts"],
   "exclude": ["node_modules"]
 }

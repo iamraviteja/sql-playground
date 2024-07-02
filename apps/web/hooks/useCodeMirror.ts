@@ -1,4 +1,6 @@
 // use-code-mirror.ts
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import { EditorView, basicSetup } from "codemirror";
 import { sql } from "@codemirror/lang-sql";

@@ -1,7 +1,7 @@
 export const DATA_TYPES: string[] = ["integer", "float", "char", "text"];
 
 function createColumns(schema: any) {
-  return schema.map((o) => `${o.colName} ${o.colType}`).join(", ");
+  return schema.map((o: { colName: any; colType: any; }) => `${o.colName} ${o.colType}`).join(", ");
 }
 
 const createValueByType: any = {
@@ -34,7 +34,7 @@ export function createTable(
   let sqlstr = `DROP TABLE IF EXISTS ${tableName};\n`;
   sqlstr += `CREATE TABLE ${tableName} (${createColumns(schema)});`;
   data = data.slice(0,10);
-  data.forEach((el) => {
+  data.forEach((el: any) => {
     sqlstr += `INSERT INTO ${tableName} VALUES (${createValues(el, schema)});`;
   });
   db.exec(sqlstr);

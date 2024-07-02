@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 
 export const ADD_TABLE_ITEM = "add_table_item";

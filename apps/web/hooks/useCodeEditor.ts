@@ -1,4 +1,6 @@
 // use-code-editor.ts
+"use client";
+
 import { useEffect } from "react";
 import { EditorView } from "codemirror";
 import {onUpdate} from "./onUpdate";
